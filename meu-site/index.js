@@ -25,12 +25,12 @@ app.set("views", path.join(__dirname, "views", "pages"));
 app.use(express.static(path.join(__dirname, "public")));
 
 
-app.get("/",        (req, res) => res.render("pages/index",    { title: "Início" }));
-app.get("/carta",   (req, res) => res.render("pages/carta",    { title: "Cartinha" }));
-app.get("/contagem",(req, res) => res.render("pages/contagem", { title: "Contagem" }));
-app.get("/fotos",   (req, res) => res.render("pages/fotos",    { title: "Fotos" }));
-app.get("/linha",   (req, res) => res.render("pages/linha",    { title: "Linha do tempo" }));
-app.get("/musicas", (req, res) => res.render("pages/musicas",  { title: "Músicas" }));
+app.get("/",        (req, res) => res.render("index",    { title: "Início" }));
+app.get("/carta",   (req, res) => res.render("carta",    { title: "Cartinha" }));
+app.get("/contagem",(req, res) => res.render("contagem", { title: "Contagem" }));
+app.get("/fotos",   (req, res) => res.render("fotos",    { title: "Fotos" }));
+app.get("/linha",   (req, res) => res.render("linha",    { title: "Linha do tempo" }));
+app.get("/musicas", (req, res) => res.render("musicas",  { title: "Músicas" }));
 
 const PORT = process.env.PORT || 3006;
 app.listen(PORT, () => console.log(`✅ Server on http://localhost:${PORT}`));
