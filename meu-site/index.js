@@ -32,5 +32,8 @@ app.get("/fotos",   (req, res) => res.render("fotos",    { title: "Fotos" }));
 app.get("/linha",   (req, res) => res.render("linha",    { title: "Linha do tempo" }));
 app.get("/musicas", (req, res) => res.render("musicas",  { title: "Músicas" }));
 
-const PORT = process.env.PORT || 3006;
-app.listen(PORT, () => console.log(`✅ Server on http://localhost:${PORT}`));
+const PORT = process.env.PORT || 10000;
+// Importante ouvir em 0.0.0.0
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`✅ Server on http://localhost:${PORT}`);
+});
